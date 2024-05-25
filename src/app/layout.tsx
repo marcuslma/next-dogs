@@ -1,22 +1,37 @@
-import type { Metadata } from 'next';
-import Menu from '@/components/menu';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
+
+import userGet from "@/actions/user-get";
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import { UserContextProvider } from "@/context/user-context";
+import { type_second } from "@/functions/fonts";
 
 export const metadata: Metadata = {
-  title: 'Origamid Next',
-  description: 'Criado por Origamid',
+  title: "Dogs Next",
+  description: "Rede social para cachorros.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
+  const { data: user } = await userGet();
+
   return (
     <html lang="pt-BR">
-      <body>
-        <Menu />
-        {children}
+      <body className={type_second.variable}>
+        <UserContextProvider user={user}>
+          <div className="App">
+            <Header />
+            <main className="AppBody">{children}</main>
+            <div>{modal}</div>
+            <Footer />
+          </div>
+        </UserContextProvider>
       </body>
     </html>
   );
