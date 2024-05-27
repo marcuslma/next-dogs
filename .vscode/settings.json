@@ -1,15 +1,54 @@
 {
-  // "git.enabled": false,
-  // "files.exclude": {
-  //   "node_modules": true,
-  //   ".vscode": true,
-  //   ".gitignore": true,
-  //   "package.json": true,
-  //   "package-lock.json": true,
-  //   ".eslintrc*": true,
-  //   "tsconfig.*": true,
-  //   "next-env.d.ts": true,
-  //   "next.config.mjs": true,
-  //   "README.md": true
-  // }
+  "breadcrumbs.enabled": true,
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.colorDecorators": false,
+  "editor.fontFamily": "IBM Plex Mono, Monaco, Courier New, monospace",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.lineHeight": 28,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "selection",
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "html.autoClosingTags": false,
+  "terminal.integrated.fontSize": 16,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "workbench.colorTheme": "Origamid Next",
+  "workbench.iconTheme": "origamid-next-icons",
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": true,
+  "files.associations": {
+    "*.js": "javascriptreact",
+    "*.tsx": "typescriptreact"
+  },
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 0,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "window.newWindowDimensions": "inherit",
+  "telemetry.telemetryLevel": "off"
 }

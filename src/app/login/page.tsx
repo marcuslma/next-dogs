@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import Heading1 from "@/components/headings/heading-1";
 import LoginForm from "@/components/login/login-form";
 
 export const metadata: Metadata = {
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 export default async function LoginPage() {
   return (
     <section className="animeLeft">
-      <h1 className="title">Login</h1>
+      <Heading1>Login</Heading1>
       <LoginForm />
     </section>
   );
