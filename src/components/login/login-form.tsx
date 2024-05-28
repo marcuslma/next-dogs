@@ -6,8 +6,8 @@ import { useFormState, useFormStatus } from "react-dom";
 
 import login from "@/actions/login";
 import Button from "@/components/forms/button";
-import Input from "@/components/forms/input";
 
+import InputText from "../forms/input_text";
 import ErrorMessage from "../helper/error-message";
 import styles from "./login-form.module.css";
 
@@ -39,8 +39,8 @@ export default function LoginForm() {
   return (
     <>
       <form action={action} className={styles.form}>
-        <Input label="Usuário" name="username" type="text" />
-        <Input label="Senha" name="password" type="password" />
+        <InputText label="Usuário" name="username" type="text" />
+        <InputText label="Senha" name="password" type="password" />
         <ErrorMessage error={state.error} />
         <FormButton />
       </form>
