@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        spectral: ["var(--type-second)", "Georgia"],
+        "dog-next-first": ["Helvetica", "Arial", "sans-serif"],
+        "dog-next-second": ["var(--type-second-spectral)", "Georgia"],
       },
     },
   },

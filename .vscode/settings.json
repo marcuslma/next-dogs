@@ -5,7 +5,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.colorDecorators": false,
   "editor.fontFamily": "IBM Plex Mono, Monaco, Courier New, monospace",
-  "editor.fontSize": 16,
+  "editor.fontSize": 18,
   "editor.formatOnSave": true,
   "editor.lineHeight": 28,
   "editor.minimap.enabled": false,

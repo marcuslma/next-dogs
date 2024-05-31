@@ -9,6 +9,7 @@ import Button from "@/components/forms/button";
 
 import InputText from "../forms/input_text";
 import ErrorMessage from "../helper/error-message";
+import Subtitle from "../titles/subtitle";
 import styles from "./login-form.module.css";
 
 function FormButton() {
@@ -50,7 +51,7 @@ export default function LoginForm() {
       </Link>
 
       <div className={styles.cadastro}>
-        <h2 className={styles.subtitle}>Cadastre-se</h2>
+        <Subtitle>Cadastre-se</Subtitle>
         <p>Ainda não possui conta? Cadastre-se no site.</p>
         <Link className="button" href="/login/criar">
           Cadastro
