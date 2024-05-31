@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 
 import photoDelete from "@/actions/photo-delete";

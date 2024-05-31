@@ -9,14 +9,17 @@ export default function InputText({ label, error, ...props }: InputProps) {
       <label className="block text-base leading-4 pb-2" htmlFor={props.name}>
         {label}
       </label>
+
       <input
-        className="border border-[#eee] block w-full text-base p-[0.8rem] rounded-[0.4rem] bg-[#eee] transition duration-200
+        className="border border-[#eee] block w-full text-base
+          p-[0.8rem] rounded-[0.4rem] bg-[#eee] transition duration-200
           hover:outline-none hover:border-[#fb1] hover:bg-white hover:ring hover:ring-[#fea]
           focus:outline-none focus:border-[#fb1] focus:bg-white focus:ring focus:ring-[#fea]"
         type="text"
         id={props.name}
         {...props}
       />
+
       {error && <p className="text-[#f31] text-sm mt-1">{error}</p>}
     </div>
   );

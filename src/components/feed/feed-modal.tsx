@@ -11,9 +11,7 @@ export default function FeedModal({ photo }: { photo: PhotoData }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  if (!pathname.includes("foto")) {
-    return null;
-  }
+  if (!pathname.includes("foto")) return null;
 
   function handleOutsideClick(event: React.MouseEvent<HTMLDivElement>) {
     if (event.target === event.currentTarget) router.back();
