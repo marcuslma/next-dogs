@@ -11,12 +11,12 @@ export default function InputText({ label, error, ...props }: InputProps) {
       </label>
 
       <input
+        id={props.name}
         className="border border-[#eee] block w-full text-base
           p-[0.8rem] rounded-[0.4rem] bg-[#eee] transition duration-200
           hover:outline-none hover:border-[#fb1] hover:bg-white hover:ring hover:ring-[#fea]
           focus:outline-none focus:border-[#fb1] focus:bg-white focus:ring focus:ring-[#fea]"
         type="text"
-        id={props.name}
         {...props}
       />
 

@@ -1,9 +1,11 @@
 import Link from "next/link";
 
+import Title from "@/components/titles/title";
+
 export default function NotFound() {
   return (
     <section className="container">
-      <h1 className="title">Página não encontrada</h1>
+      <Title>Página não encontrada</Title>
 
       <Link
         className="button"

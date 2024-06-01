@@ -7,7 +7,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import login from "@/actions/login";
 import Button from "@/components/forms/button";
 
-import InputText from "../forms/input_text";
+import InputText from "../forms/input-text";
 import ErrorMessage from "../helper/error-message";
 import Subtitle from "../titles/subtitle";
 import styles from "./login-form.module.css";

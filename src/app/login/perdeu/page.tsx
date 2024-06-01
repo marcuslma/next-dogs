@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
 import LoginPerdeuForm from "@/components/login/login-perdeu-form";
+import AnimatedSection from "@/components/section/animated-section";
+import Title from "@/components/titles/title";
 
 export const metadata: Metadata = {
   title: "Perdeu a senha | Dogs",
@@ -9,9 +11,9 @@ export const metadata: Metadata = {
 
 export default async function PerdeuPage() {
   return (
-    <div className="animeLeft">
-      <h1 className="title">Perdeu a senha?</h1>
+    <AnimatedSection>
+      <Title>Perdeu a senha?</Title>
       <LoginPerdeuForm />
-    </div>
+    </AnimatedSection>
   );
 }

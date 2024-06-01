@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
 import LoginCriarForm from "@/components/login/login-criar-form";
+import AnimatedSection from "@/components/section/animated-section";
+import Title from "@/components/titles/title";
 
 export const metadata: Metadata = {
   title: "Crie sua conta",
@@ -9,9 +11,9 @@ export const metadata: Metadata = {
 
 export default async function CriarPage() {
   return (
-    <div className="animeLeft">
-      <h1 className="title">Cadastre-se</h1>
+    <AnimatedSection>
+      <Title>Cadastre-se</Title>
       <LoginCriarForm />
-    </div>
+    </AnimatedSection>
   );
 }

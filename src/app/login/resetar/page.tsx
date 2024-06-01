@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 
 import LoginResetarForm from "@/components/login/login-resetar-form";
+import AnimatedSection from "@/components/section/animated-section";
+import Title from "@/components/titles/title";
 
 export const metadata: Metadata = {
   title: "Resetar a senha | Dogs",
@@ -18,12 +20,12 @@ export default async function ResetarPage({
   searchParams,
 }: ResetarSearchParams) {
   return (
-    <div className="animeLeft">
-      <h1 className="title">Resete a Senha</h1>
+    <AnimatedSection>
+      <Title>Resete a Senha</Title>
       <LoginResetarForm
         keyToken={searchParams.key}
         login={searchParams.login}
       />
-    </div>
+    </AnimatedSection>
   );
 }

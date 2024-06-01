@@ -12,6 +12,7 @@ import EstatisticasIcon from "@/icons/estatisticas-icon";
 import FeedIcon from "@/icons/feed-icon";
 import SairIcon from "@/icons/sair-icon";
 
+import Title from "../titles/title";
 import styles from "./conta-header.module.css";
 
 function getTitle(pathname: string) {
@@ -43,7 +44,7 @@ export default function ContaHeader() {
 
   return (
     <header className={styles.header}>
-      <h1 className="title">{getTitle(pathname)}</h1>
+      <Title>{getTitle(pathname)}</Title>
 
       {mobile && (
         <button

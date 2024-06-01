@@ -1,4 +1,4 @@
-export default async function Subtitle({
+export default function Subtitle({
   children,
 }: Readonly<{
   children: React.ReactNode;

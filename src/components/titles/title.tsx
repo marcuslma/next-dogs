@@ -1,4 +1,4 @@
-export default async function Title({
+export default function Title({
   children,
 }: Readonly<{
   children: React.ReactNode;

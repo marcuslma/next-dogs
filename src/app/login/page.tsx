@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 
 import LoginForm from "@/components/login/login-form";
+import AnimatedSection from "@/components/section/animated-section";
 import Title from "@/components/titles/title";
 
 export const metadata: Metadata = {
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
 
 export default async function LoginPage() {
   return (
-    <section className="animeLeft">
+    <AnimatedSection>
       <Title>Login</Title>
       <LoginForm />
-    </section>
+    </AnimatedSection>
   );
 }

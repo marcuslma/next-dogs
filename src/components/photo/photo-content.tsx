@@ -7,6 +7,7 @@ import React from "react";
 import { PhotoData } from "@/actions/photo-get";
 import { useUser } from "@/context/user-context";
 
+import Title from "../titles/title";
 import PhotoComments from "./photo-comments";
 import styles from "./photo-content.module.css";
 import PhotoDelete from "./photo-delete";
@@ -38,9 +39,9 @@ const PhotoContent = ({
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
 
-          <h1 className="title">
+          <Title>
             <Link href={`/foto/${photo.id}`}>{photo.title}</Link>
-          </h1>
+          </Title>
 
           <ul className={styles.attributes}>
             <li>{photo.peso} kg</li>

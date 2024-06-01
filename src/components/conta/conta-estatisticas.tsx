@@ -5,6 +5,7 @@ import { VictoryBar, VictoryChart, VictoryPie } from "victory";
 
 import { StatsData } from "@/actions/stats-get";
 
+import AnimatedSection from "../section/animated-section";
 import styles from "./conta-estatisticas.module.css";
 
 type GraphData = {
@@ -32,7 +33,7 @@ export default function ContaEstatisticas({ data }: { data: StatsData[] }) {
   }, [data]);
 
   return (
-    <section className={`${styles.graph} animeLeft`}>
+    <AnimatedSection className="grid gap-8 grid-cols-2 mb-8 max-sm:grid-cols-1">
       <div className={`${styles.total} ${styles.graphItem}`}>
         <p>Acessos: {total}</p>
       </div>
@@ -54,6 +55,6 @@ export default function ContaEstatisticas({ data }: { data: StatsData[] }) {
           <VictoryBar alignment="start" data={graph}></VictoryBar>
         </VictoryChart>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

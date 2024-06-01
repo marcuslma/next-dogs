@@ -1,5 +1,6 @@
 import photosGet from "@/actions/photos-get";
 import Feed from "@/components/feed/feed";
+import Title from "@/components/titles/title";
 
 export default async function PerfilUserPage({
   params,
@@ -12,7 +13,7 @@ export default async function PerfilUserPage({
 
   return (
     <section className="container mainSection">
-      <h1 className="title">{params.user}</h1>
+      <Title>{params.user}</Title>
       <Feed photos={data} user={params.user} />
     </section>
   );

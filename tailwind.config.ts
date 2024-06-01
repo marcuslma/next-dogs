@@ -12,6 +12,14 @@ const config: Config = {
         "dog-next-first": ["Helvetica", "Arial", "sans-serif"],
         "dog-next-second": ["var(--type-second-spectral)", "Georgia"],
       },
+      keyframes: {
+        "dog-next-anime-left": {
+          to: {
+            opacity: "1",
+            transform: "initial",
+          },
+        },
+      },
     },
   },
   plugins: [],
