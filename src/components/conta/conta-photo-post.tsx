@@ -40,7 +40,7 @@ export default function ContaPhotoPost() {
   }
 
   return (
-    <section className={`${styles.photoPost} animeLeft`}>
+    <section className={`${styles.photoPost} animate-dogs-next-fade-right`}>
       <form action={action}>
         <Input label="Nome" name="nome" type="text" />
         <Input label="Peso" name="peso" type="number" />

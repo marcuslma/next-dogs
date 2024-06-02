@@ -1,11 +1,14 @@
 type SectionProps = React.ComponentProps<"section">;
 
 export default function AnimatedSection({ className, ...props }: SectionProps) {
+  let sectionClassName = "animate-dogs-next-fade-right";
+
+  if (className) {
+    sectionClassName = `${className} ${sectionClassName}`;
+  }
+
   return (
-    <section
-      className={`${className} opacity-0 translate-x-[-20px] animate-[dog-next-anime-left_0.3s_forwards]`}
-      {...props}
-    >
+    <section className={sectionClassName} {...props}>
       {props.children}
     </section>
   );

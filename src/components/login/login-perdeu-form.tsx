@@ -8,7 +8,6 @@ import Button from "@/components/forms/button";
 import Input from "@/components/forms/input";
 
 import ErrorMessage from "../helper/error-message";
-import styles from "./login-form.module.css";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -38,7 +37,7 @@ export default function LoginPerdeuForm() {
   }, []);
 
   return (
-    <form action={action} className={styles.form}>
+    <form action={action} className="mb-8">
       <Input label="Email / Usuário" name="login" type="text" />
       <input type="hidden" name="url" value={url} />
       <ErrorMessage error={state.error} />

@@ -7,7 +7,7 @@ import styles from "./feed.module.css";
 
 export default function FeedPhotos({ photos }: { photos: Photo[] }) {
   return (
-    <ul className={`${styles.feed} animeLeft`}>
+    <ul className={`${styles.feed} animate-dogs-next-fade-right`}>
       {photos.map((photo, i) => (
         <li className={styles.photo} key={photo.id + i}>
           <Link href={`/foto/${photo.id}`} scroll={false}>

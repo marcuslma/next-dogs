@@ -5,7 +5,7 @@ import userGet from "@/actions/user-get";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { UserContextProvider } from "@/context/user-context";
-import { type_second } from "@/functions/fonts";
+import { font_spectral } from "@/functions/fonts";
 
 export const metadata: Metadata = {
   title: "Dogs Next",
@@ -23,7 +23,7 @@ export default async function RootLayout({
 
   return (
     <html lang="pt-BR">
-      <body className={type_second.variable}>
+      <body className={font_spectral.variable}>
         <UserContextProvider user={user}>
           <div className="App">
             <Header />

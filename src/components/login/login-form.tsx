@@ -10,7 +10,6 @@ import Button from "@/components/forms/button";
 import InputText from "../forms/input-text";
 import ErrorMessage from "../helper/error-message";
 import Subtitle from "../titles/subtitle";
-import styles from "./login-form.module.css";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -39,20 +38,24 @@ export default function LoginForm() {
 
   return (
     <>
-      <form action={action} className={styles.form}>
+      <form action={action} className="mb-8">
         <InputText label="Usuário" name="username" type="text" />
         <InputText label="Senha" name="password" type="password" />
         <ErrorMessage error={state.error} />
         <FormButton />
       </form>
 
-      <Link className={styles.perdeu} href="/login/perdeu">
+      <Link
+        className="inline-block text-[#666] py-2 px-0 leading-none
+          after:content-[''] after:h-0.5 after:w-full after:block after:bg-current"
+        href="/login/perdeu"
+      >
         Perdeu a senha?
       </Link>
 
-      <div className={styles.cadastro}>
+      <div className="my-16">
         <Subtitle>Cadastre-se</Subtitle>
-        <p>Ainda não possui conta? Cadastre-se no site.</p>
+        <p className="my-8">Ainda não possui conta? Cadastre-se no site.</p>
         <Link className="button" href="/login/criar">
           Cadastro
         </Link>

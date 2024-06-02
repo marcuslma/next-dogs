@@ -5,7 +5,7 @@ export default function Subtitle({
 }>) {
   return (
     <h2
-      className="font-dog-next-second leading-none text-[2rem] after:content-['']
+      className="font-dogs-next-display leading-none text-[2rem] after:content-['']
         after:block after:w-12 after:h-2 after:bg-[#ddd] after:rounded-[0.2rem]"
     >
       {children}
