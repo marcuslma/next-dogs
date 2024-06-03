@@ -5,21 +5,17 @@ import { useFormState, useFormStatus } from "react-dom";
 
 import userPost from "@/actions/user-post";
 import Button from "@/components/forms/button";
-import Input from "@/components/forms/input";
 
+import InputText from "../forms/input-text";
 import ErrorMessage from "../helper/error-message";
 
 function FormButton() {
   const { pending } = useFormStatus();
 
   return (
-    <>
-      {pending ? (
-        <Button disabled={pending}>Cadastrando...</Button>
-      ) : (
-        <Button>Cadastrar</Button>
-      )}
-    </>
+    <Button disabled={pending}>
+      {pending ? "Cadastrando..." : "Cadastrar"}
+    </Button>
   );
 }
 
@@ -36,9 +32,9 @@ export default function LoginCriarForm() {
 
   return (
     <form action={action} className="mb-8">
-      <Input label="Usuário" name="username" type="text" />
-      <Input label="Email" name="email" type="email" />
-      <Input label="Senha" name="password" type="password" />
+      <InputText label="Usuário" name="username" type="text" />
+      <InputText label="Email" name="email" type="email" />
+      <InputText label="Senha" name="password" type="password" />
       <ErrorMessage error={state.error} />
       <FormButton />
     </form>

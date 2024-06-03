@@ -7,6 +7,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import login from "@/actions/login";
 import Button from "@/components/forms/button";
 
+import ButtonLink from "../buttons/button-link";
 import InputText from "../forms/input-text";
 import ErrorMessage from "../helper/error-message";
 import Subtitle from "../titles/subtitle";
@@ -15,13 +16,7 @@ function FormButton() {
   const { pending } = useFormStatus();
 
   return (
-    <>
-      {pending ? (
-        <Button disabled={pending}>Enviando...</Button>
-      ) : (
-        <Button>Entrar</Button>
-      )}
-    </>
+    <Button disabled={pending}>{pending ? "Enviando..." : "Entrar"}</Button>
   );
 }
 
@@ -39,7 +34,7 @@ export default function LoginForm() {
   return (
     <>
       <form action={action} className="mb-8">
-        <InputText label="Usuário" name="username" type="text" />
+        <InputText label="Usuário" name="username" />
         <InputText label="Senha" name="password" type="password" />
         <ErrorMessage error={state.error} />
         <FormButton />
@@ -56,9 +51,7 @@ export default function LoginForm() {
       <div className="my-16">
         <Subtitle>Cadastre-se</Subtitle>
         <p className="my-8">Ainda não possui conta? Cadastre-se no site.</p>
-        <Link className="button" href="/login/criar">
-          Cadastro
-        </Link>
+        <ButtonLink href="/login/criar">Cadastro</ButtonLink>
       </div>
     </>
   );

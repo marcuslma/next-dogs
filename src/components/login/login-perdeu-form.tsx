@@ -5,21 +5,17 @@ import { useFormState, useFormStatus } from "react-dom";
 
 import passwordLost from "@/actions/password-lost";
 import Button from "@/components/forms/button";
-import Input from "@/components/forms/input";
 
+import InputText from "../forms/input-text";
 import ErrorMessage from "../helper/error-message";
 
 function FormButton() {
   const { pending } = useFormStatus();
 
   return (
-    <>
-      {pending ? (
-        <Button disabled={pending}>Enviando...</Button>
-      ) : (
-        <Button>Enviar Email</Button>
-      )}
-    </>
+    <Button disabled={pending}>
+      {pending ? "Enviando..." : "Enviar Email"}
+    </Button>
   );
 }
 
@@ -38,11 +34,11 @@ export default function LoginPerdeuForm() {
 
   return (
     <form action={action} className="mb-8">
-      <Input label="Email / Usuário" name="login" type="text" />
+      <InputText label="Email / Usuário" name="login" />
       <input type="hidden" name="url" value={url} />
       <ErrorMessage error={state.error} />
       {state.ok ? (
-        <p style={{ color: "#4c1" }}>Email enviado.</p>
+        <p className="text-[#4c1]">Email enviado.</p>
       ) : (
         <FormButton />
       )}
